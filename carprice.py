@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 import pickle 
 pickle_in = open("regressor.pkl","rb")
-reg=pickle.load(pickle_in)
+regressor=pickle.load(pickle_in)
 def carprice(Kms_Driven,Owner,Present_Price,Old,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Manual):
     prediction = regressor.predict([[Kms_Driven,Owner,Present_Price,Old,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Manual]])
     print(prediction)
